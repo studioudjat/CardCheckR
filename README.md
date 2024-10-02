@@ -41,92 +41,63 @@ CardCheckR は、クレジットカードや ID カードを画像から処理�
    ```
 
 2. **依存関係をインストール**
-   <<<<<<< HEAD
-   =======
 
-> > > > > > > 53792b2 (Update README.md)
-
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. **フロントエンドサーバーを起動**
-   <<<<<<< HEAD
-   =======
 
-> > > > > > > 53792b2 (Update README.md)
+   ```bash
+   npm start
+   ```
 
-```bash
-npm start
-```
-
-フロントエンドは通常、`http://localhost:3000`で起動されます。
+   フロントエンドは通常、`http://localhost:3000` で起動されます。
 
 ### バックエンドのセットアップ
 
 1. **バックエンドのディレクトリに移動**
-   <<<<<<< HEAD
-   =======
 
-> > > > > > > 53792b2 (Update README.md)
-
-```bash
-cd backend
-```
+   ```bash
+   cd backend
+   ```
 
 2. **依存関係をインストール**
-   <<<<<<< HEAD
-   =======
 
-> > > > > > > 53792b2 (Update README.md)
+   ```bash
+   npm install
+   ```
 
-```bash
-npm install
-```
+3. **Google Cloud Vision API のサービスアカウントキーを配置**
 
-<<<<<<< HEAD 3. **Google Cloud Vision API のサービスアカウントキーを配置**
+   - `backend` フォルダに、Google Cloud Vision API のサービスアカウントキーを `service-account-key.json` という名前で配置します。
 
-- `backend`フォルダに、Google Cloud Vision API のサービスアカウントキーを`service-account-key.json`という名前で配置します。
+4. **バックエンドサーバーを起動**
 
-4. # **バックエンドサーバーを起動**
-5. **Google Cloud Vision API のサービスアカウントキーを配置**
+   ```bash
+   npm start
+   ```
 
-   - `backend`フォルダに、Google Cloud Vision API のサービスアカウントキーを`service-account-key.json`という名前で配置します。
-
-6. **バックエンドサーバーを起動**
-
-> > > > > > > 53792b2 (Update README.md)
-
-```bash
-npm start
-```
-
-バックエンドは通常、`http://localhost:8080`で起動されます。
+   バックエンドは通常、`http://localhost:8080` で起動されます。
 
 ---
 
 ## 環境変数の設定
 
-プロジェクトのルートに`.env`ファイルを作成し、以下の環境変数を設定してください。
+プロジェクトのルートに `.env` ファイルを作成し、以下の環境変数を設定してください。
 
 ```plaintext
 GOOGLE_APPLICATION_CREDENTIALS=./service-account-key.json
 PORT=8080
 ```
 
-<<<<<<< HEAD
-`GOOGLE_APPLICATION_CREDENTIALS`は、Google Cloud Vision API のサービスアカウントキーのパスを指定します。
-=======
-`GOOGLE_APPLICATION_CREDENTIALS`は、Google Cloud Vision API のサービスアカウントキーのパスを指定します。
-
-> > > > > > > 53792b2 (Update README.md)
+`GOOGLE_APPLICATION_CREDENTIALS` は、Google Cloud Vision API のサービスアカウントキーのパスを指定します。
 
 ---
 
 ## 使用方法
 
 1. **カードの処理**:
-   <<<<<<< HEAD
 
    - フロントエンドで「Capture Card」ボタンを押してカメラを起動し、クレジットカードや ID カードをキャプチャします。
    - その後、画像を送信してカードの情報を自動的に抽出します。
@@ -134,16 +105,10 @@ PORT=8080
 2. **API エンドポイント**:
 
    - `POST /process-credit-card`: クレジットカードの画像を処理します。
-   - # `POST /process-id-card`: ID カードの画像を処理します。
-
-   - フロントエンドで「Capture Card」ボタンを押してカメラを起動し、クレジットカードや ID カードをキャプチャします。
-   - その後、画像を送信してカードの情報を自動的に抽出します。
-
-3. **API エンドポイント**:
-   - `POST /process-credit-card`: クレジットカードの画像を処理します。
    - `POST /process-id-card`: ID カードの画像を処理します。
-     > > > > > > > 53792b2 (Update README.md)
 
 ---
 
 ## ライセンス
+
+このプロジェクトは [MIT ライセンス](LICENSE) のもとで公開されています。
