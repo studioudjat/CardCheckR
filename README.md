@@ -1,114 +1,114 @@
 # CardCheckR
 
-CardCheckR は、クレジットカードや ID カードを画像から処理し、Google Cloud Vision API を使用して情報を抽出する Web アプリケーションです。アプリはフロントエンドとバックエンドの 2 つの部分から構成されており、それぞれのセットアップ方法や使用方法について説明します。
+CardCheckR is a web application that processes images of credit cards and ID cards and extracts information using the Google Cloud Vision API. The application consists of two parts: the frontend and the backend, and it explains how to set up and use each part.
 
-## プロジェクト構成
+## Project Structure
 
-- **frontend**: React ベースのユーザーインターフェース。
-- **backend**: Node.js と Express で構築された API サーバー。Google Cloud Vision API を使用してカードの情報を抽出します。
-
----
-
-## 目次
-
-- [必要要件](#必要要件)
-- [セットアップ](#セットアップ)
-  - [フロントエンドのセットアップ](#フロントエンドのセットアップ)
-  - [バックエンドのセットアップ](#バックエンドのセットアップ)
-- [環境変数の設定](#環境変数の設定)
-- [使用方法](#使用方法)
-- [ライセンス](#ライセンス)
+- **frontend**: A React-based user interface.
+- **backend**: An API server built with Node.js and Express. It uses the Google Cloud Vision API to extract information from cards.
 
 ---
 
-## 必要要件
+## Table of Contents
 
-このプロジェクトを動作させるには、以下が必要です。
-
-- [Node.js](https://nodejs.org/)（推奨バージョン: 14.x またはそれ以上）
-- Google Cloud Vision API のサービスアカウントキー（`service-account-key.json`）
+- [Requirements](#requirements)
+- [Setup](#setup)
+  - [Frontend Setup](#frontend-setup)
+  - [Backend Setup](#backend-setup)
+- [Environment Variables](#environment-variables)
+- [Usage](#usage)
+- [License](#license)
 
 ---
 
-## セットアップ
+## Requirements
 
-### フロントエンドのセットアップ
+To run this project, you will need the following:
 
-1. **フロントエンドのディレクトリに移動**
+- [Node.js](https://nodejs.org/) (Recommended version: 14.x or later)
+- Google Cloud Vision API service account key (`service-account-key.json`)
+
+---
+
+## Setup
+
+### Frontend Setup
+
+1. **Navigate to the frontend directory**
 
    ```bash
    cd frontend
    ```
 
-2. **依存関係をインストール**
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. **フロントエンドサーバーを起動**
+3. **Start the frontend server**
 
    ```bash
    npm start
    ```
 
-   フロントエンドは通常、`http://localhost:3000` で起動されます。
+   The frontend is typically available at `http://localhost:3000`.
 
-### バックエンドのセットアップ
+### Backend Setup
 
-1. **バックエンドのディレクトリに移動**
+1. **Navigate to the backend directory**
 
    ```bash
    cd backend
    ```
 
-2. **依存関係をインストール**
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. **Google Cloud Vision API のサービスアカウントキーを配置**
+3. **Place the Google Cloud Vision API service account key**
 
-   - `backend` フォルダに、Google Cloud Vision API のサービスアカウントキーを `service-account-key.json` という名前で配置します。
+   - Place the Google Cloud Vision API service account key in the `backend` folder and name it `service-account-key.json`.
 
-4. **バックエンドサーバーを起動**
+4. **Start the backend server**
 
    ```bash
    npm start
    ```
 
-   バックエンドは通常、`http://localhost:8080` で起動されます。
+   The backend is typically available at `http://localhost:8080`.
 
 ---
 
-## 環境変数の設定
+## Environment Variables
 
-プロジェクトのルートに `.env` ファイルを作成し、以下の環境変数を設定してください。
+Create a `.env` file in the project's root directory and configure the following environment variables:
 
 ```plaintext
 GOOGLE_APPLICATION_CREDENTIALS=./service-account-key.json
 PORT=8080
 ```
 
-`GOOGLE_APPLICATION_CREDENTIALS` は、Google Cloud Vision API のサービスアカウントキーのパスを指定します。
+`GOOGLE_APPLICATION_CREDENTIALS` specifies the path to the Google Cloud Vision API service account key.
 
 ---
 
-## 使用方法
+## Usage
 
-1. **カードの処理**:
+1. **Processing cards**:
 
-   - フロントエンドで「Capture Card」ボタンを押してカメラを起動し、クレジットカードや ID カードをキャプチャします。
-   - その後、画像を送信してカードの情報を自動的に抽出します。
+   - In the frontend, press the "Capture Card" button to launch the camera and capture an image of a credit card or ID card.
+   - After capturing, the image is sent to automatically extract the card's information.
 
-2. **API エンドポイント**:
+2. **API Endpoints**:
 
-   - `POST /process-credit-card`: クレジットカードの画像を処理します。
-   - `POST /process-id-card`: ID カードの画像を処理します。
+   - `POST /process-credit-card`: Processes a credit card image.
+   - `POST /process-id-card`: Processes an ID card image.
 
 ---
 
-## ライセンス
+## License
 
-このプロジェクトは [MIT ライセンス](LICENSE) のもとで公開されています。
+This project is licensed under the [MIT License](LICENSE).
